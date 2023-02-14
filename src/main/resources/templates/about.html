@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>About | The Blue Ridge Chapel</title>
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+	crossorigin="anonymous">
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,900;1,400&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,900;1,700&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" href="/css/navigation.css">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="people-circle" viewBox="0 0 16 16">
+    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+  </symbol>
+</svg>
+
+<div th:replace="navigation::header"></div>
+
+<div id="about-header" class="cover-container d-flex w-100 p-3 mx-auto flex-column">
+<div class="mt-auto mb-auto px-3 text-center text-white">
+   <h2 class="text-white">About The Blue Ridge Chapel</h2>
+   <p class="lead">Come away to the peace, privacy, and natural beauty of Waynesville and Maggie Valley!
+</p>
+</div>
+</div>
+
+<div id="about" class="container">
+
+<div class="row">
+
+<div class="col-md-8">
+
+	<h3>Experience Waynesville With Us</h3>
+	<p>This peaceful mountain-top cabin is the kind of private getaway a country music star would stay 
+	in for a while (the owner is connected to the industry). Also perfect for the whole family, the 3-story
+	 home has 2 bedrooms, a full kitchen, open concept living areas with soaring ceilings and seamless windows,
+	  and 2 large balconies to enjoy the views.
+	</p>
+
+	<ul>
+	<li>17 min drive to Maggie Valley</li>
+	<li>25 min drive to Cataloochee Ski Area</li>
+	<li>28 min drive to the GSMNP</li>
+	</ul>
+
+</div>
+<div class="col-md-4">
+
+	<h3>Entire cabin hosted by Tyler:</h3>
+	<p>6 Guests | 2 Bedrooms | 4 Beds | 2.5 Baths
+	
+	<div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+        </div>
+        <div>
+          <h3>Great for remote work</h3>
+          <p>Fast wifi at 74 Mbps, plus a dedicated workspace in a private room.</p>
+          
+        </div>
+      </div>
+      </div>
+      
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+        </div>
+        <div>
+          <h3>Self check-in</h3>
+          <p>Check yourself in with the smartlock.</p>
+          
+        </div>
+      </div>
+      </div>
+
+	<div class="row g-4 py-5 row-cols-1 row-cols-lg-1">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+        </div>
+        <div>
+          <h3>Tyler is a Superhost via Airbnb</h3>
+          <p>Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.</p>
+          
+        </div>
+      </div>
+      </div>
+
+</div>
+
+</div>
+
+
+
+
+<h3>What This Place Offers:</h3>
+<ul th:each="amenity,iterStat: ${amenitiesList}" th:if="${iterStat.index}<5">
+	<li th:text="${amenity.name}"></li>
+</ul>
+<button class="btn btn-primary">Click here to see all amenities</button>
+</div>
+
+</body>
+</html>

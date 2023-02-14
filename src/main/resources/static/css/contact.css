@@ -1,0 +1,31 @@
+@charset "ISO-8859-1";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  max-width: 400px;
+  padding: 50px;
+  background-color:white;
+  border:1px solid #8C8C8C;
+  box-shadow: 6px 6px #8C8C8C;
+	
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+.form-signin input{
+	margin-bottom:20px;
+	border-radius:0;
+}
