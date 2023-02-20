@@ -21,5 +21,5 @@ view any cancelations, manage credit cards on file, etc.</p>
 <li>Download the zip from the repository</li>
 <li>Click into the zipped folder and select the unzipped folder.(File named: TheBlueRidgeChapel)</li>
 <li>Import the project in your desired IDE and run the project as a Spring Boot project.</li>
-<li>Navigate to your desired browser and type in the URL <a href="http://localhost:8080">http://localhost:8080</a>
+<li>Navigate to your desired browser and type in the URL <a href="http://localhost:8080">http://localhost:8080</a> to browse the application
 </ol>
